@@ -47,7 +47,7 @@ export const MenuContainer = () => {
           <CustomLink href="/" title="Home" />
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <CustomLink href="/template/1" title="Template" />
+          <CustomLink href="/template/templateTest" title="Template Test" />
         </MenuItem>
       </Menu>
     </div>
