@@ -2,11 +2,9 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Link from "@mui/material/Link";
-import { Link as ReactRouterLink } from "react-router-dom";
 import { CustomLink } from "../custom-link";
 import "./menu.css";
-
+import MenuIcon from "@mui/icons-material/Menu";
 export const MenuContainer = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -26,7 +24,7 @@ export const MenuContainer = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        Menu
+        <MenuIcon color="secondary" />
       </Button>
       <Menu
         id="demo-positioned-menu"

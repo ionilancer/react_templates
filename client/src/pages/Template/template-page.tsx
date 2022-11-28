@@ -1,10 +1,10 @@
-import { MenuContainer } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   creategGetTemplateResoponseModel,
   getTemplate,
 } from "../../controllers/template-controller";
 import { useEffect, useState } from "react";
+import { AppNav } from "../../components/app-bar/app-bar";
 
 export const TemplatePage = () => {
   const history = useNavigate();
@@ -25,7 +25,7 @@ export const TemplatePage = () => {
   const TemplateComp = templateLoaded.component as React.ComponentType<any>;
   return (
     <>
-      <MenuContainer />
+      <AppNav {...{ title: "Template" }} />
       <TemplateComp {...templateLoaded.modelConstructor()} />
     </>
   );
