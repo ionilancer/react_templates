@@ -7,7 +7,7 @@ import {
 
 interface getTemplateResoponseModel {
   modelConstructor: any;
-  component?: React.ComponentType<any>;
+  component: React.ComponentType<any>;
 }
 export const creategGetTemplateResoponseModel =
   (): getTemplateResoponseModel => {
@@ -17,12 +17,12 @@ export const creategGetTemplateResoponseModel =
     };
   };
 export const getTemplate = async (
-  _templateCode: string
+  templateCode: string
 ): Promise<getTemplateResoponseModel> => {
   const componentMapped = templateCodeToComponentMap.get(
-    _templateCode as unknown as TemplateCodeEnum
+    templateCode as TemplateCodeEnum
   ) as TemplateCompModel;
-  if (!componentMapped) throw "Template not found";
+  if (!componentMapped) throw new Error("Template not found");
   return {
     component: componentMapped.component,
     modelConstructor: componentMapped.modelConstructor,
