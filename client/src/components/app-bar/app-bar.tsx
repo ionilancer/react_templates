@@ -10,12 +10,10 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { MenuContainer } from "../menu";
 import { useTheme } from "@mui/material";
 import { ThemeContext } from "../../context/theme-context";
+import { AppBarModel } from "./app-bar-model";
+import { MenutTypesEnum } from "../../helper/menu-creator";
 
-interface props {
-  title: string;
-}
-
-export function AppNav({ title }: props) {
+export function AppNav({ title }: AppBarModel) {
   const themeContext = React.useContext(ThemeContext);
   const theme = useTheme();
   const isDarkTheme = theme.palette.mode === "dark";
@@ -26,12 +24,13 @@ export function AppNav({ title }: props) {
     >;
     setThemeModel(changeToMode);
   };
+
   console.log("themeContext", themeContext);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <MenuContainer />
+          <MenuContainer menu={MenutTypesEnum.default} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {title}
           </Typography>

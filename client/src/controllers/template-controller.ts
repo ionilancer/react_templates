@@ -3,17 +3,18 @@ import {
   TemplateCodeEnum,
   templateCodeToComponentMap,
   TemplateCompModel,
+  templateModelKeys,
 } from "./mappers/templateCodeToComponentMap";
 
 interface getTemplateResoponseModel {
-  modelConstructor: any;
+  modelConstructor: templateModelKeys;
   component: React.ComponentType<any>;
 }
 export const creategGetTemplateResoponseModel =
   (): getTemplateResoponseModel => {
     return {
       component: DefaultComponent,
-      modelConstructor: () => {},
+      modelConstructor: {},
     };
   };
 export const getTemplate = async (

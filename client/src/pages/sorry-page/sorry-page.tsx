@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuContainer } from "../../components";
+import { MenuContainer } from "../../components/menu";
 
 export const SorryPage = () => {
   return (
