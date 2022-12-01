@@ -22,11 +22,11 @@ export const TemplatePage = () => {
     });
   }, [history, templateCode]);
 
-  const TemplateComp = templateLoaded.component as React.ComponentType<any>;
+  const TemplateComp = templateLoaded.component;
   return (
     <>
       <AppNav {...{ title: "Template" }} />
-      <TemplateComp {...templateLoaded.modelConstructor()} />
+      <TemplateComp {...templateLoaded.modelConstructor} />
     </>
   );
 };

@@ -1,39 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Home, TemplatePage } from "./pages/";
-import { Route, Routes } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { SorryPage } from "./pages/sorry-page";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeContext } from "./context/theme-context";
 import { darkTheme, lightTheme } from "./config/defaultThemeConfig";
+import { CustomDrawer } from "./components/drawer/";
+import { RouterMapper } from "./routes";
 
 function App() {
   const [mode, setMode] = useState("dark");
   const selectedTheme = mode === "dark" ? darkTheme : lightTheme;
-  const value = {
+  const themeModel = {
     themeMode: mode,
     setThemeMode: setMode,
   };
   return (
     <>
-      <ThemeContext.Provider value={value}>
+      <ThemeContext.Provider value={themeModel}>
         <ThemeProvider theme={selectedTheme}>
           <CssBaseline />
-          <div className="Page">
-            <div className="sideBar"></div>
-            <div className="mainWindow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route
-                  path="/template/:templateCode"
-                  element={<TemplatePage />}
-                />
-                <Route path="/sorry" element={<SorryPage />} />
-              </Routes>
-            </div>
-            <div className="rightBar"></div>
-          </div>
+          <CustomDrawer />
+          <RouterMapper />
         </ThemeProvider>
       </ThemeContext.Provider>
     </>

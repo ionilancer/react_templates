@@ -1,11 +1,15 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import { CustomLink } from "../custom-link";
-import "./menu.css";
 import MenuIcon from "@mui/icons-material/Menu";
-export const MenuContainer = () => {
+import { MenuContainerModel } from "./menu-container-model";
+import { CreateMenu } from "./create-menu";
+import "./menu.css";
+import { MenutTypesEnum } from "../../helper/menu-creator";
+
+export function MenuContainer({
+  menu = MenutTypesEnum.default,
+}: MenuContainerModel) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -41,13 +45,8 @@ export const MenuContainer = () => {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleClose}>
-          <CustomLink href="/" title="Home" />
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <CustomLink href="/template/templateTest" title="Template Test" />
-        </MenuItem>
+        <CreateMenu menu={menu} />
       </Menu>
     </div>
   );
-};
+}

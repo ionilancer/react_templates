@@ -1,15 +1,15 @@
-import { createTemplateModel } from "../../Models";
+import { createTemplateModel, TemplateModel } from "../../Models";
 import { TemplateTest } from "../../templates/template-test";
-
+export type templateModelKeys = TemplateModel | {};
 export interface TemplateCompModel {
   component: React.ComponentType<any>;
-  modelConstructor: any;
+  modelConstructor: templateModelKeys;
 }
+
 const templateTesComponet: TemplateCompModel = {
   component: TemplateTest,
-  modelConstructor: createTemplateModel,
+  modelConstructor: createTemplateModel(),
 };
-
 export const enum TemplateCodeEnum {
   templateTest = "templateTest",
 }
