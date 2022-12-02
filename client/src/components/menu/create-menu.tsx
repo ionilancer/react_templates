@@ -17,7 +17,7 @@ export function CreateMenu({
     <>
       {defaultMenu.map((menuProps) => {
         return (
-          <MenuItem>
+          <MenuItem key={menuProps.href}>
             <CustomLink href={menuProps.href} title={menuProps.title} />
           </MenuItem>
         );
