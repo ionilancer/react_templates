@@ -1,20 +1,9 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Slide,
-} from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { Box, Button, List } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+import { MenuDrawer } from "../../menu/";
 import "./drawer.css";
+
 export const CustomDrawer = () => {
   type Anchor = "left";
   const [state, setState] = useState({
@@ -45,29 +34,7 @@ export const CustomDrawer = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <MenuDrawer />
       </List>
     </Box>
   );
