@@ -1,5 +1,5 @@
 import React from "react";
-import { TemplateModel } from "../../Models";
+import { TemplateModel } from "./model";
 
 export const TemplateTest = (model: TemplateModel) => {
   return (
