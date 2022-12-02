@@ -1,7 +1,5 @@
 import React from "react";
-import { List, ListItem, ListItemButton, ListItemIcon } from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { Divider, List, ListItem, ListItemButton } from "@mui/material";
 import { CustomLink } from "../../custom-link";
 import {
   MenuModel,
@@ -16,16 +14,14 @@ export function MenuDrawer() {
   return (
     <>
       <List>
-        {menuMapped.map((value, index) => (
+        {menuMapped.map((value) => (
           <ListItem disablePadding key={value.title}>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
               <CustomLink href={value.href} title={value.title} />
             </ListItemButton>
           </ListItem>
         ))}
+        <Divider />
       </List>
     </>
   );

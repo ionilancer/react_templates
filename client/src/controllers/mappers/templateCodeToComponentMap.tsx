@@ -1,27 +1,30 @@
 import * as templates from "../../templates";
-export type templateModelKeys = templates.TemplateModel | {};
-export interface TemplateCompModel {
+export type templateModelKeys =
+  | templates.TemplateModel
+  | templates.TemplateColorModel;
+
+export interface TemplateCompModel<T> {
   component: React.ComponentType<any>;
-  modelConstructor: templateModelKeys;
+  modelConstructor: T;
 }
 
-const templateTesComponet: TemplateCompModel = {
+const templateTesComponet: TemplateCompModel<templates.TemplateModel> = {
   component: templates.TemplateTest,
   modelConstructor: templates.createTemplateModel(),
 };
 
-const templateColorComp: TemplateCompModel = {
+const templateColorComp: TemplateCompModel<templates.TemplateColorModel> = {
   component: templates.TemplateColor,
   modelConstructor: templates.createTemplateColorModel(),
 };
 
-export const enum TemplateCodeEnum {
+export enum TemplateCodeEnum {
   templateTest = "templateTest",
-  templateColor = "TemplateColor",
+  templateColor = "templateColor",
 }
 export const templateCodeToComponentMap = new Map<
   TemplateCodeEnum,
-  TemplateCompModel
+  TemplateCompModel<templateModelKeys>
 >([
   [TemplateCodeEnum.templateTest, templateTesComponet],
   [TemplateCodeEnum.templateColor, templateColorComp],

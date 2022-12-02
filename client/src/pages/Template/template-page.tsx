@@ -4,7 +4,6 @@ import {
   getTemplate,
 } from "../../controllers/template-controller";
 import { useEffect, useState } from "react";
-import { AppNav } from "../../components/app-bar/app-bar";
 
 export const TemplatePage = () => {
   const history = useNavigate();
