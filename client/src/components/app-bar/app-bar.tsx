@@ -25,7 +25,6 @@ export function AppNav({ title }: AppBarModel) {
     setThemeModel(changeToMode);
   };
 
-  console.log("themeContext", themeContext);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

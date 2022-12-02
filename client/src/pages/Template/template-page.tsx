@@ -25,7 +25,6 @@ export const TemplatePage = () => {
   const TemplateComp = templateLoaded.component;
   return (
     <>
-      <AppNav {...{ title: "Template" }} />
       <TemplateComp {...templateLoaded.modelConstructor} />
     </>
   );
