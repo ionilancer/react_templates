@@ -1,8 +1,11 @@
-export interface TemplateModel {
-  code: string;
-}
+import {
+  TemplateBaseModel,
+  TemplateCodeEnum,
+} from "../../model/template-base-model";
+export interface TemplateModel extends TemplateBaseModel {}
 export const createTemplateModel = (): TemplateModel => {
   return {
-    code: "",
+    code: TemplateCodeEnum.templateTest,
+    name: "Test template",
   };
 };

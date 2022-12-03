@@ -7,3 +7,14 @@
   top: 0;
   left: 0;
 }
+.drawer-container-button {
+  background-color: transparent !important;
+  width: 10px !important;
+  min-width: 10px !important;
+  height: 10px !important;
+  margin: 0 !important;
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}

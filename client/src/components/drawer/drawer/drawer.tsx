@@ -7,10 +7,7 @@ import "./drawer.css";
 export const CustomDrawer = () => {
   type Anchor = "left";
   const [state, setState] = useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
   const toggleDrawer =
@@ -44,7 +41,10 @@ export const CustomDrawer = () => {
       <div className="drawer-container">
         {(["left"] as const).map((anchor) => (
           <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}></Button>
+            <Button
+              className="drawer-container-button"
+              onClick={toggleDrawer(anchor, true)}
+            ></Button>
             <Drawer
               anchor={anchor}
               open={state[anchor]}
