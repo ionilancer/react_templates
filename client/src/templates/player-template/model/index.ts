@@ -1,1 +1,2 @@
-export * from "./template-color-model";
+export * from "./player-template-model";
+export * from "./player-song-model";

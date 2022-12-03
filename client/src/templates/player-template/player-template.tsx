@@ -1,10 +1,14 @@
 import React from "react";
-import { TemplateModel } from "../template-test/model";
+import { PlayerTemplateModel } from "./model";
+import { MusicPlayer } from "../../features/music-player";
+import "./player-template.css";
+import { VideoPlayer } from "../../features/background-video-player";
 
-export const PlayerTemplate = (model: TemplateModel) => {
+export const PlayerTemplate = (model: PlayerTemplateModel) => {
   return (
     <>
-      <p>Template Player</p>
+      <VideoPlayer video={model.songList[0].video} />
+      <MusicPlayer {...model.songList[0]} />
     </>
   );
 };
