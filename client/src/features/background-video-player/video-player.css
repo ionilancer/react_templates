@@ -1,24 +1,22 @@
-.music-player {
-  z-index: 1;
-  position: relative;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  box-shadow: inset 0px -34vh 150px -72px rgb(0 0 0 / 80%);
-
-  bottom: 0;
-  position: absolute;
-  height: 40%;
+html,
+body,
+#templates-react-app,
+#templates-react-app > .video-container {
+  height: 100%;
+}
+.video-container {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: dark;
 }
-.song-info-container {
-  text-align: left;
-}
-.song-info-container h2,
-h5 {
-  margin: 0;
-  padding: 0;
-}
-.song-info-container h5 {
-  color: #b8b8b8;
+
+.video-container video {
+  width: 200%;
+
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.85;
 }
