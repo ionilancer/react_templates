@@ -26,7 +26,7 @@ export const Home = () => {
     <>
       <MenuContainer />
       {templates.map((template) => (
-        <p>
+        <p key={template.modelConstructor.code}>
           <CustomLink
             href={`/template/${template.modelConstructor.code}`}
             title={template.modelConstructor.name}

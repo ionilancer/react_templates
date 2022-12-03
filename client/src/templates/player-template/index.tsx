@@ -1,2 +1,2 @@
-export * from "./template-test";
 export * from "./player-template";
+export * from "./model";

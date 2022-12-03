@@ -8,3 +8,7 @@ export const createTemplateBaseModel = (): TemplateBaseModel => {
     name: "",
   };
 };
+export enum TemplateCodeEnum {
+  templateTest = "templateTest",
+  playerTemplate = "playerTemplate",
+}

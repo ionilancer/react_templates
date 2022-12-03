@@ -1,7 +1,8 @@
-import * as templates from "../../templates";
+import * as templates from "..";
+import { TemplateCodeEnum } from "../model/template-base-model";
 export type templateModelKeys =
   | templates.TemplateModel
-  | templates.TemplateColorModel;
+  | templates.PlayerTemplateModel;
 
 export interface TemplateCompModel<T> {
   component: React.ComponentType<any>;
@@ -13,19 +14,15 @@ const templateTesComponet: TemplateCompModel<templates.TemplateModel> = {
   modelConstructor: templates.createTemplateModel(),
 };
 
-const templateColorComp: TemplateCompModel<templates.TemplateColorModel> = {
-  component: templates.TemplateColor,
-  modelConstructor: templates.createTemplateColorModel(),
+const templateColorComp: TemplateCompModel<templates.PlayerTemplateModel> = {
+  component: templates.PlayerTemplate,
+  modelConstructor: templates.createPlayerTemplateModel(),
 };
 
-export enum TemplateCodeEnum {
-  templateTest = "templateTest",
-  templateColor = "templateColor",
-}
 export const templateCodeToComponentMap = new Map<
   TemplateCodeEnum,
   TemplateCompModel<templateModelKeys>
 >([
   [TemplateCodeEnum.templateTest, templateTesComponet],
-  [TemplateCodeEnum.templateColor, templateColorComp],
+  [TemplateCodeEnum.playerTemplate, templateColorComp],
 ]);
