@@ -5,5 +5,4 @@ export interface PlayerSongModel {
   artist: string;
   photo: string;
   video: VideoTypeEnum;
-  mp4: string;
 }

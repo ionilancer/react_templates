@@ -18,7 +18,6 @@ export const createPlayerTemplateModel = (): PlayerTemplateModel => {
         artist: "Artist",
         photo: "",
         video: VideoTypeEnum.default,
-        mp4: "./public/video_vertical.mp4",
       },
     ],
   };

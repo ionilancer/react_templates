@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { MenuContainerModel } from "./menu-container-model";
 import { CreateMenu } from "./create-menu";
 import "./menu.css";
-import { MenutTypesEnum } from "../../helper/menu-creator";
+import { MenutTypesEnum } from "./helper/menu-creator";
 
 export function MenuContainer({
   menu = MenutTypesEnum.default,

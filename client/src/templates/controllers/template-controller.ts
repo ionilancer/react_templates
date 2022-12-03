@@ -1,10 +1,10 @@
-import { DefaultComponent } from "../components/default/defaults";
+import { DefaultComponent } from "../../components/default/defaults";
 import {
   templateCodeToComponentMap,
   TemplateCompModel,
   templateModelKeys,
-} from "../templates/mappers/templateCodeToComponentMap";
-import { TemplateCodeEnum } from "../templates/model/template-base-model";
+} from "../mappers/templateCodeToComponentMap";
+import { TemplateCodeEnum } from "../model/template-base-model";
 
 interface getTemplateResoponseModel {
   modelConstructor: templateModelKeys;

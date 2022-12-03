@@ -5,7 +5,7 @@ import {
   MenuModel,
   MenutTypesEnum,
   menuTypeEnumToMenuModel,
-} from "../../../helper/menu-creator";
+} from "../helper/menu-creator";
 
 export function MenuDrawer() {
   const menuMapped = menuTypeEnumToMenuModel.get(

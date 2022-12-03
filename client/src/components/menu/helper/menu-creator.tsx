@@ -13,11 +13,11 @@ const defaultMenu: MenuModel[] = [
   },
 ];
 const drawerMenu: MenuModel[] = [...defaultMenu];
-drawerMenu.push({
+/*drawerMenu.push({
   href: "/template/templateTest",
   title: "Search",
 });
-
+*/
 export const menuTypeEnumToMenuModel = new Map<MenutTypesEnum, MenuModel[]>([
   [MenutTypesEnum.default, defaultMenu],
   [MenutTypesEnum.drawer, drawerMenu],

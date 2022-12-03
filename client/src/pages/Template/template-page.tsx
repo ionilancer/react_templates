@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   creategGetTemplateResoponseModel,
   getTemplate,
-} from "../../controllers/template-controller";
+} from "../../templates/controllers/template-controller";
 import { useEffect, useState } from "react";
 
 export const TemplatePage = () => {
