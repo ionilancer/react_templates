@@ -9,9 +9,9 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { MenuContainer } from "../menu";
 import { useTheme } from "@mui/material";
-import { ThemeContext } from "../../context/theme-context";
+import { ThemeContext } from "../../pages/context/theme-context";
 import { AppBarModel } from "./app-bar-model";
-import { MenutTypesEnum } from "../../helper/menu-creator";
+import { MenutTypesEnum } from "../menu/helper/menu-creator";
 
 export function AppNav({ title }: AppBarModel) {
   const themeContext = React.useContext(ThemeContext);

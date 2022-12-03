@@ -7,7 +7,7 @@ import {
   MenuModel,
   MenutTypesEnum,
   menuTypeEnumToMenuModel,
-} from "../../helper/menu-creator";
+} from "./helper/menu-creator";
 
 export function CreateMenu({
   menu = MenutTypesEnum.default,

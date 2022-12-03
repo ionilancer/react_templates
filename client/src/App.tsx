@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeContext } from "./context/theme-context";
+import { ThemeContext } from "./pages/context/theme-context";
 import { darkTheme, lightTheme } from "./config/defaultThemeConfig";
 import { CustomDrawer } from "./components/drawer/";
 import { RouterMapper } from "./routes";

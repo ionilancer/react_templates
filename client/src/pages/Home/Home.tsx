@@ -5,7 +5,7 @@ import { CustomLink } from "../../components/custom-link";
 import {
   creategGetTemplateResoponseModel,
   getTemplateList,
-} from "../../controllers/template-controller";
+} from "../../templates/controllers/template-controller";
 
 export const Home = () => {
   const [templates, setTemplates] = useState([
