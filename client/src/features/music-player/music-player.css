@@ -22,3 +22,23 @@ h5 {
 .song-info-container h5 {
   color: #b8b8b8;
 }
+
+.audio-control-container {
+  position: relative;
+  width: 100%;
+  bottom: -5vh;
+}
+.makeStyles-sliderContainer-56 {
+  position: absolute;
+  top: -7vh;
+  background: red;
+  width: 100%;
+  color: #fff !important;
+}
+
+.makeStyles-sliderContainer-56 * {
+  color: white;
+}
+.makeStyles-commonContainer-58 {
+  background-color: blue;
+}
