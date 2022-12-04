@@ -2,7 +2,7 @@ import React from "react";
 import { PlayerTemplateModel } from "./model";
 import "./player-template.css";
 import { VideoPlayer } from "../../features/background-video-player";
-import MusicPlayer from "../../features/music-player-modal/music-player";
+import MusicPlayer from "../../features/music-player/music-player";
 
 export const PlayerTemplate = (model: PlayerTemplateModel) => {
   return (
