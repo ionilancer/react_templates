@@ -1,6 +1,9 @@
 export enum SongTypeEnum {
   default = "default",
 }
-export const songTypeToFileMap = new Map<SongTypeEnum, any>([
-  [SongTypeEnum.default, "URL"],
+export interface VideoPlayerModel {
+  url: string;
+}
+export const songTypeToFileMap = new Map<SongTypeEnum, VideoPlayerModel>([
+  [SongTypeEnum.default, { url: "urlDefault" }],
 ]);

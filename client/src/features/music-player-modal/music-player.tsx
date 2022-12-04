@@ -8,8 +8,9 @@ import {
   getControls,
   getVolume,
 } from "./music-player-components";
+import { VideoPlayerModel } from "./model/music-player-model";
 
-export default function MusicPlayerModal() {
+export default function MusicPlayer(model: VideoPlayerModel) {
   const theme = useTheme();
   const duration = 200; // seconds
   const [position, setPosition] = React.useState(200);

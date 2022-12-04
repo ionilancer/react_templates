@@ -83,12 +83,12 @@ export function getControls(
     </Box>
   );
 }
-export function getSlider(
+export const getSlider = (
   position: number,
   duration: number,
   setPosition: React.Dispatch<React.SetStateAction<number>>,
   theme: Theme
-) {
+) => {
   return (
     <>
       <Slider
@@ -139,7 +139,7 @@ export function getSlider(
       </Box>
     </>
   );
-}
+};
 export function songInfo() {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
