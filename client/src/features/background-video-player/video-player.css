@@ -3,7 +3,9 @@ body,
 #templates-react-app,
 #templates-react-app > .video-container {
   height: 100%;
+  position: relative;
 }
+
 .video-container {
   width: 100%;
   max-width: 100%;
@@ -13,10 +15,9 @@ body,
 }
 
 .video-container video {
-  width: 200%;
-
+  width: 120%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.85;
+  opacity: 0.95;
 }
